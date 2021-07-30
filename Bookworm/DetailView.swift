@@ -39,6 +39,7 @@ struct DetailView: View {
 
                 Text(self.book.review ?? "No review")
                     .padding()
+                Text("Edited on:\(book.timestamp!,formatter: itemFormatter)")
 
                 RatingView(rating: .constant(Int(self.book.rating)))
                     .font(.largeTitle)
